@@ -28,7 +28,11 @@ function findLargestNumber(randomNumbers) {
 
   // Add your for loop here
 
-
+  for (let i = 0; index < randomNumbers.length; i++) {
+    if (highestNumber < randomNumbers[i]) {
+      highestNumber = randomNumbers[i];
+    }
+  }
 
 
 
@@ -52,7 +56,11 @@ function findSmallestNumber(randomNumbers) {
 
   // Add your for loop here
 
-
+  for (let i = 0; index < randomNumbers.length; i++) {
+    if (smallestNumber > randomNumbers[i]) {
+      smallestNumber = randomNumbers[i];
+    }
+  }
 
 
 
@@ -76,8 +84,9 @@ function calculateSumTotal(randomNumbers) {
 
   // Add your for loop here to calculate the sum total
 
-
-
+  for (let i = 0; i < randomNumbers.length; i++) {
+    sumTotal = sumTotal + randomNumbers[i];
+  }
 
    // This returns the value we calculated
   return sumTotal;
@@ -99,6 +108,9 @@ function calculateAverage(randomNumbers) {
   // Use your calculateSumTotal(randomNumbers) function call to get the
   // sum total and divide it by the randomNumbers.length value and then
   // assign it to the average variable
+
+  
+  average = calculateSumTotal(randomNumbers) / randomNumbers.length;
 
 
   // Uncomment the line below if you want to have the average rounded at 2 decimal places
